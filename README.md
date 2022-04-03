@@ -17,6 +17,25 @@ the case of that component, the deployment has been tested:
 
 # Package objectives
 
+## Standard Objective
+
+The objective is to be able to enter easily transactions in the system
+to track a direct investment into a Portfiolio company and generate
+automatically the GL Postings.
+
+The following table summarizes the amount to be entered and the
+calculation process made on the back of it
+
+| Transaction Code | Nb Amounts | Definition of Amounts               | GL Entries                                 |
+|------------------|------------|-------------------------------------|--------------------------------------------|
+| PCO Buy          | 1          | Amount of Investment                | Amount vs. Cash                            |
+| PCO Valuation    | 1          | **TOTAL** amount of the valuation   | Increase/or decrease of the unrealised P&L |
+|                  |            | The system calculates automatically |                                            |
+|                  |            | the variation of valuation to be    |                                            |
+|                  |            | reflected in the accounting system  |                                            |
+
+## Colmore Objective
+
 # Deployment
 
 Each party should be deployed used in the order described
