@@ -26,15 +26,42 @@ automatically the GL Postings.
 The following table summarizes the amount to be entered and the
 calculation process made on the back of it
 
-| Transaction Code | Nb Amounts | Definition of Amounts               | GL Entries                                 |
-|------------------|------------|-------------------------------------|--------------------------------------------|
-| PCO Buy          | 1          | Amount of Investment                | Amount vs. Cash                            |
-| PCO Valuation    | 1          | **TOTAL** amount of the valuation   | Increase/or decrease of the unrealised P&L |
-|                  |            | The system calculates automatically |                                            |
-|                  |            | the variation of valuation to be    |                                            |
-|                  |            | reflected in the accounting system  |                                            |
+| Transaction Code     | Nb Amounts | Definition of Amounts             | GL Entries                                 |
+|----------------------|------------|-----------------------------------|--------------------------------------------|
+| PCO Buy              | 1          | Amount of Investment              | Amount vs. Cash                            |
+| PCO Valuation        | 1          | **TOTAL** amount of the valuation | Increase/or decrease of the unrealised P&L |
+| PCO Income/(Expense) | 1          | Positive if Income                | Credit/Debit P&L account vs Cash           |
+| PCO Sale             | 2          | Total Capital Sold (PCS)          | Generates the various entries against      |
+|                      |            | Total Proceeds                    | Investment/Unrealized/Realized/Cash        |
+
+<div class="center">
+
+*For Valuation the system automatically calculates the variation of
+Unrealized P&L* That is a key simplification required by end-users
+
+</div>
+
+All these transactions can be uploaded automatically into the system.
+(Cf. Test Case spreadsheets provided)
 
 ## Colmore Objective
+
+The objective at Colmore is 2 fold:
+
+1.  Enable them to enter the 5 balances they receive for the Investee
+    Funds at the end of each quarter. That is the purpose of the <u>PCO
+    Transaction</u> which automatically calculates all the variations
+    since previous balance in order to adjust all the intermediate
+    counters
+2.  Mix the <u>PCO Transaction</u> with the other PCO Buy/Valuation … In
+    case some extra/more accurate information becomes available, then
+    Colmore wants to be able to enter it (basically extra movements at
+    the right date in order to be able to calculate a more accurate IRR)
+    and nevertheless keeps on entering the balances provided at the end
+    of the period.
+
+By managing internally the different intermediate counters,this becomes
+possible for Colmore.
 
 # Deployment
 
